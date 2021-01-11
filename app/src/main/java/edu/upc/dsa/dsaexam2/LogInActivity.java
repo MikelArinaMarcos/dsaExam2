@@ -25,6 +25,6 @@ public class LogInActivity extends AppCompatActivity {
     private void loadSharedPreference() {
         SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE);
         useName = preferences.getString("userName", "error");
-        Intent intent = new Intent(this, userActivity.class);
+        Intent intent = new Intent(this, UserActivity.class);
     }
 }
