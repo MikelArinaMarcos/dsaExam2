@@ -22,9 +22,14 @@ public class LogInActivity extends AppCompatActivity {
         loadSharedPreference();
     }
 
-    private void loadSharedPreference() {
+    protected void loadSharedPreference() {
         SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE);
         useName = preferences.getString("userName", "error");
         Intent intent = new Intent(this, UserActivity.class);
+    }
+
+    public void searchClick(android.view.View v) {
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
     }
 }
